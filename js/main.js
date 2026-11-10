@@ -8,6 +8,7 @@
 // ==========================================================================
 // Mapeie os links das suas plataformas de pagamento (Hotmart, Kiwify, Stripe, Mercado Pago)
 const CHECKOUT_LINKS = {
+  'ebook-receitas-natal': 'https://pay.kiwify.com.br/exemplo-ebook-natal',
   'kernel-os': 'https://pay.kiwify.com.br/exemplo-kernel-os',
   'manual-operacoes': 'https://pay.hotmart.com/exemplo-manual-operacoes',
   'toolkit-automacao': 'https://pay.kiwify.com.br/exemplo-toolkit-automacao',
@@ -16,6 +17,23 @@ const CHECKOUT_LINKS = {
 
 // Dados detalhados dos produtos para o modal de checkout
 const PRODUCTS_DATA = {
+  'ebook-receitas-natal': {
+    id: 'ebook-receitas-natal',
+    title: 'Guia Completo da Ceia de Natal: Receitas, Sobremesas, Drinks & Mapas Mentais',
+    category: 'E-book Digital + Mapas Mentais Ilustrados',
+    priceOriginal: 'R$ 97',
+    priceCurrent: 'R$ 47',
+    installments: 'ou 5x de R$ 10,25 no cartão',
+    badge: 'Edição Especial de Natal • Acesso Imediato',
+    benefits: [
+      'Download imediato do e-book completo em PDF de alta resolução',
+      '5 Mapas Mentais ilustrados para organização e pré-preparo da ceia',
+      'Mais de 50 receitas testadas de assados, guarnições, sobremesas e drinks',
+      'Cronograma prático passo a passo de 48h e 24h antes da ceia',
+      'Lista inteligente de compras e sugestões de substituições de ingredientes',
+      'Garantia incondicional de devolução total em até 7 dias (CDC)'
+    ]
+  },
   'kernel-os': {
     id: 'kernel-os',
     title: 'Kernel OS: Sistema Integrado de Gestão & Produtividade',
@@ -97,6 +115,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initCategoryFilters();
   initCheckoutModal();
   initPolicyModals();
+  initProductCarousel();
+  initLightbox();
 });
 
 // ==========================================================================
@@ -501,4 +521,150 @@ function showToast(message) {
   setTimeout(() => {
     toast.classList.remove('show');
   }, 3500);
+}
+
+// ==========================================================================
+// 11. CARROSSEL DE FOTOS (MAPAS MENTAIS) & LIGHTBOX
+// ==========================================================================
+function initProductCarousel() {
+  const carouselTrack = document.getElementById('carouselTrack');
+  const prevBtn = document.getElementById('carouselPrevBtn');
+  const nextBtn = document.getElementById('carouselNextBtn');
+  const counterCurrent = document.getElementById('carouselCurrent');
+  const captionTitle = document.getElementById('carouselCaptionTitle');
+  const captionDesc = document.getElementById('carouselCaptionDesc');
+  const thumbBtns = document.querySelectorAll('.thumb-btn');
+  const slides = document.querySelectorAll('.carousel-slide');
+
+  if (!carouselTrack || !slides.length) return;
+
+  let currentIndex = 0;
+  const totalSlides = slides.length;
+
+  function updateCarousel(index) {
+    if (index < 0) index = totalSlides - 1;
+    if (index >= totalSlides) index = 0;
+    currentIndex = index;
+
+    // Move track
+    carouselTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+    // Atualiza classes ativas nos slides
+    slides.forEach((slide, i) => {
+      if (i === currentIndex) {
+        slide.classList.add('active');
+      } else {
+        slide.classList.remove('active');
+      }
+    });
+
+    // Atualiza contador
+    if (counterCurrent) {
+      counterCurrent.textContent = currentIndex + 1;
+    }
+
+    // Atualiza legendas
+    const currentSlide = slides[currentIndex];
+    if (currentSlide) {
+      const title = currentSlide.getAttribute('data-title') || '';
+      const desc = currentSlide.getAttribute('data-desc') || '';
+      if (captionTitle) captionTitle.textContent = title;
+      if (captionDesc) captionDesc.textContent = desc;
+    }
+
+    // Atualiza miniaturas
+    thumbBtns.forEach((thumb, i) => {
+      if (i === currentIndex) {
+        thumb.classList.add('active');
+      } else {
+        thumb.classList.remove('active');
+      }
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      updateCarousel(currentIndex - 1);
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      updateCarousel(currentIndex + 1);
+    });
+  }
+
+  thumbBtns.forEach((thumb, idx) => {
+    thumb.addEventListener('click', (e) => {
+      e.preventDefault();
+      updateCarousel(idx);
+    });
+  });
+
+  // Suporte a swipe no mobile
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  carouselTrack.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+
+  carouselTrack.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    const diff = touchStartX - touchEndX;
+    if (Math.abs(diff) > 40) {
+      if (diff > 0) {
+        updateCarousel(currentIndex + 1);
+      } else {
+        updateCarousel(currentIndex - 1);
+      }
+    }
+  }, { passive: true });
+}
+
+function initLightbox() {
+  const lightboxModal = document.getElementById('imageLightboxModal');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxCaption = document.getElementById('lightboxCaption');
+  const lightboxCloseBtn = document.getElementById('lightboxCloseBtn');
+  const slides = document.querySelectorAll('.carousel-slide');
+
+  if (!lightboxModal || !lightboxImg) return;
+
+  function openLightbox(imgSrc, title, desc) {
+    lightboxImg.src = imgSrc;
+    if (lightboxCaption) {
+      lightboxCaption.innerHTML = `<strong>${title}</strong><div style="margin-top: 4px; font-size: 0.8125rem; color: #94A3B8;">${desc}</div>`;
+    }
+    openModal(lightboxModal);
+  }
+
+  slides.forEach(slide => {
+    slide.addEventListener('click', () => {
+      const img = slide.querySelector('img');
+      const title = slide.getAttribute('data-title') || '';
+      const desc = slide.getAttribute('data-desc') || '';
+      if (img) {
+        openLightbox(img.src, title, desc);
+      }
+    });
+  });
+
+  if (lightboxCloseBtn) {
+    lightboxCloseBtn.addEventListener('click', () => closeModal(lightboxModal));
+  }
+
+  lightboxModal.addEventListener('click', (e) => {
+    if (e.target === lightboxModal) {
+      closeModal(lightboxModal);
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightboxModal.classList.contains('open')) {
+      closeModal(lightboxModal);
+    }
+  });
 }
