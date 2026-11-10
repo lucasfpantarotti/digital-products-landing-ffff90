@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LK // Sistemas, Recursos e Produtos Digitais de Alta Precisão</title>
+  <meta name="description" content="Sistemas operacionais no Notion, manuais táticos e ferramentas de automação desenhados com rigor técnico. Sem fórmulas mágicas, sem ruído. 100% utilidade prática.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230F172A'/><text x='16' y='21' font-family='system-ui,sans-serif' font-size='14' font-weight='800' fill='%23FFFFFF' text-anchor='middle'>LK</text></svg>">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="LK // Sistemas, Recursos e Produtos Digitais">
+  <meta property="og:description" content="Estruturas operacionais e ferramentas sem ruído para acelerar sua execução. Entrega imediata e garantia incondicional de 7 dias.">
+
+  <!-- Google Fonts: Plus Jakarta Sans + Newsreader -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Estilos Customizados -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       BARRA SUPERIOR DE CONFIANÇA (Announcement Bar)
+       ========================================================================== -->
+  <aside class="announcement-bar" aria-label="Avisos e Garantias de Compra">
+    <div class="container announcement-inner">
+      <div class="announcement-pill">
+        <span class="status-dot"></span>
+        <span>SISTEMA ATIVO</span>
+      </div>
+
+      <div class="announcement-messages">
+        <div class="announcement-item">
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+          <span>Entrega 100% imediata e automática via e-mail</span>
+        </div>
+
+        <div class="announcement-item">
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+          <span>Garantia incondicional de 7 dias (CDC Art. 49)</span>
+        </div>
+      </div>
+
+      <div class="announcement-badge">
+        <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+        </svg>
+        <span>Checkout Seguro 256-bit</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       HEADER & NAVEGAÇÃO
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#" class="brand-link" aria-label="LK Laboratório Digital">
+        <div class="brand-monogram">
+          <!-- Monograma Geométrico Abstrato Minimalista -->
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <path d="M3 14h7v7H3z"></path>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">LK</span>
+          <span class="brand-tagline">Laboratório Digital</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" aria-label="Navegação Principal">
+        <a href="#metodo" class="nav-link">Sobre & Método</a>
+        <a href="#catalogo" class="nav-link">Produtos</a>
+        <a href="#garantia" class="nav-link">Transparência</a>
+        <a href="#faq" class="nav-link">Dúvidas</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#catalogo" class="btn btn-primary btn-sm">
+          <span>Ver Catálogo</span>
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </a>
+
+        <button class="mobile-toggle" aria-label="Abrir Menu de Navegação" aria-expanded="false">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav" aria-label="Menu Mobile">
+    <a href="#metodo" class="mobile-nav-link">Sobre & Método</a>
+    <a href="#catalogo" class="mobile-nav-link">Catálogo de Produtos</a>
+    <a href="#garantia" class="mobile-nav-link">Transparência & Blindagem</a>
+    <a href="#depoimentos" class="mobile-nav-link">Avaliações de Clientes</a>
+    <a href="#faq" class="mobile-nav-link">Perguntas Frequentes</a>
+    <a href="#catalogo" class="btn btn-primary btn-block">Acessar Produtos Digitais</a>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION (Dobra Principal)
+         ========================================================================== -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-tag">
+            <span class="hero-tag-pulse"></span>
+            <span>Recursos & Produtos Digitais</span>
+          </div>
+
+          <h1 class="hero-headline">
+            Sistemas e métodos digitais para quem valoriza <em>clareza, eficiência</em> e tempo.
+          </h1>
+
+          <p class="hero-subtitle">
+            Estruturas operacionais no Notion, planilhas inteligentes e manuais táticos prontos para uso. Desenvolvidos para eliminar o caos da sua rotina — sem fórmulas mágicas, sem promessas infladas e sem ruído.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#catalogo" class="btn btn-primary btn-lg">
+              <span>Explorar Catálogo</span>
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </a>
+
+            <a href="#metodo" class="btn btn-secondary btn-lg">
+              <span>Entenda o que fazemos</span>
+            </a>
+          </div>
+
+          <!-- Barra de Métricas de Credibilidade -->
+          <div class="hero-metrics">
+            <div class="metric-item">
+              <div class="metric-number">+1.840</div>
+              <div class="metric-label">Downloads Entregues</div>
+            </div>
+
+            <div class="metric-item">
+              <div class="metric-number">98.4%</div>
+              <div class="metric-label">Taxa de Satisfação</div>
+            </div>
+
+            <div class="metric-item">
+              <div class="metric-number">7 Dias</div>
+              <div class="metric-label">Garantia Incondicional</div>
+            </div>
+
+            <div class="metric-item">
+              <div class="metric-number">&lt; 2 min</div>
+              <div class="metric-label">Acesso Imediato no E-mail</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         MANIFESTO / "O QUE FAZEMOS" (Notas de Transparência)
+         ========================================================================== -->
+    <section id="metodo" class="section section-alt">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-kicker">Filosofia Operacional</span>
+          <h2 class="section-title">
+            Criado contra a cultura da <em>enrolação digital.</em>
+          </h2>
+          <p class="section-desc mx-auto">
+            O mercado tradicional de infoprodutos está saturado de cursos de 40 horas que poderiam ser um checklist e promessas vazias de ganhos milagrosos. Nossa abordagem é o oposto: arquitetura de informação limpa e utilidade prática imediata.
+          </p>
+        </div>
+
+        <div class="manifesto-grid">
+          <div class="manifesto-card">
+            <div class="manifesto-num">01 // OBJETIVIDADE</div>
+            <h3 class="manifesto-card-title">Zero enrolação, 100% utilidade prática</h3>
+            <p class="manifesto-card-desc">
+              Cada material é sintetizado ao essencial indispensável. Você não precisa assistir a dezenas de horas de palestras para começar; você faz a duplicação ou o download e aplica na mesma hora.
+            </p>
+          </div>
+
+          <div class="manifesto-card">
+            <div class="manifesto-num">02 // ACERVO</div>
+            <h3 class="manifesto-card-title">Acesso imediato e vitalício com atualizações</h3>
+            <p class="manifesto-card-desc">
+              Não cobramos assinaturas recorrentes nem colocamos prazo de expiração no seu acesso. Sempre que refinamos um template ou adicionamos novas rotinas, você recebe as melhorias sem pagar nada a mais.
+            </p>
+          </div>
+
+          <div class="manifesto-card">
+            <div class="manifesto-num">03 // VALIDAÇÃO</div>
+            <h3 class="manifesto-card-title">Materiais testados e prontos para implementação</h3>
+            <p class="manifesto-card-desc">
+              Todos os sistemas e fluxos foram desenvolvidos e refinados em operações reais de empresas de tecnologia, consultorias e profissionais autônomos de alta produtividade. Nada aqui é puramente teórico.
+            </p>
+          </div>
+
+          <div class="manifesto-card">
+            <div class="manifesto-num">04 // SUPORTE</div>
+            <h3 class="manifesto-card-title">Suporte individual ativo por e-mail em até 24h úteis</h3>
+            <p class="manifesto-card-desc">
+              Dúvidas técnicas ou dificuldades de duplicação são atendidas diretamente por profissionais da nossa equipe técnica via e-mail dedicado, com resolução rápida e sem intermediários automatizados.
+            </p>
+          </div>
+        </div>
+
+        <!-- Tabela Comparativa de Princípios -->
+        <div class="comparison-box">
+          <div class="comparison-header">
+            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+            <span>Alinhamento de Expectativas: Nosso Padrão vs. O Mercado Comum</span>
+          </div>
+
+          <div class="comparison-grid">
+            <div class="comparison-col bad">
+              <div class="comparison-col-title">
+                <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+                <span>O Mercado Tradicional de Infoprodutos</span>
+              </div>
+              <ul class="comparison-list">
+                <li>✕ Promessas irrealistas de "fique rico em 7 dias"</li>
+                <li>✕ Cursos inflados de 60 horas com teoria repetitiva</li>
+                <li>✕ Mensalidades camufladas e renovações automáticas</li>
+                <li>✕ Dificuldade deliberada para conseguir reembolso</li>
+              </ul>
+            </div>
+
+            <div class="comparison-col good">
+              <div class="comparison-col-title">
+                <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>O Padrão LK</span>
+              </div>
+              <ul class="comparison-list">
+                <li>✓ Foco exclusivo em economia de tempo, clareza e método</li>
+                <li>✓ Templates e ferramentas prontas que você clona em 1 minuto</li>
+                <li>✓ Pagamento único, sem cobrança recorrente oculta</li>
+                <li>✓ Reembolso integral transparente em até 24h sem burocracia</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CATÁLOGO DE PRODUTOS DIGITAIS (Grid de Conversão)
+         ========================================================================== -->
+    <section id="catalogo" class="section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-kicker">Catálogo Oficial</span>
+          <h2 class="section-title">
+            Recursos projetados para <em>organizar e acelerar.</em>
+          </h2>
+          <p class="section-desc mx-auto">
+            Escolha a ferramenta adequada para o momento da sua operação. Acesso liberado no mesmo instante da confirmação.
+          </p>
+        </div>
+
+        <!-- Filtros de Categoria -->
+        <div class="catalog-filters">
+          <button class="filter-btn active" data-category="all">Todos os Produtos</button>
+          <button class="filter-btn" data-category="system">Sistemas & Templates</button>
+          <button class="filter-btn" data-category="manual">Manuais Estratégicos</button>
+          <button class="filter-btn" data-category="tools">Ferramentas & Automações</button>
+        </div>
+
+        <div class="products-grid">
+          <!-- CARD 1 (Destaque / Mais Popular) -->
+          <article class="product-card featured" data-category="system">
+            <span class="badge-featured">Mais Popular • Versão 3.2</span>
+            
+            <div class="product-category">Sistema Operacional no Notion</div>
+            <h3 class="product-title">Kernel OS: Gestão & Produtividade</h3>
+            <p class="product-desc">
+              Workspace modular completo no Notion para centralizar projetos, rotinas operacionais, finanças e documentação com método PARA.
+            </p>
+
+            <div class="product-deliverables-title">O que está incluído no acesso:</div>
+            <ul class="product-checklist">
+              <li>
+                <span class="check-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></span>
+                <span>Template completo no Notion com duplicação em 1 clique</span>
+              </li>
+              <li>
+                <span class="check-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></span>
+                <span>Painel de controle de metas, sprints semanais e backlog</span>
+              </li>
+              <li>
+                <span class="check-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></span>
+                <span>Módulo financeiro com fluxo de caixa e projeções simples</span>
+              </li>
+              <li>
+                <span class="check-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></span>
+                <span>Biblioteca de 40+ procedimentos operacionais padrão (SOPs)</span>
+              </li>
+              <li>
+                <span class="check-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></span>
+                <span>Guia em vídeo de 20 minutos direto ao ponto de implementação</span>
+              </li>
+              <li>
+                <span class="check-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></span>
+                <span>Atualizações futuras do sistema sem custos adicionais</span>
+              </li>
+            </ul>
+
+            <div class="product-pricing">
+              <div class="price-anchor">de <del>R$ 197</del> por</div>
+              <div class="price-main">
+                <span class="price-currency">R$</span>
+                <span class="price-value">97</span>
+                <span class="price-condition">à vista</span>
+              </div>
+              <div class="price-installment">ou 12x de R$ 9,74 no cartão</div>
+            </div>
+
+            <button class="btn btn-primary btn-block" data-buy-action data-product-id="kernel-os">
+              <span>Adquirir Acesso Imediato</span>
+              <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </button>
+
+            <div class="card-security-badge">
+              <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="#059669">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+              <span>Pagamento criptografado • Garantia de 7 dias</span>
+            </div>
+          </article>
+
+          <!-- CARD 2: Manual Estratégico -->
+          <article class="product-card" data-category="manual">
+            <div class="product-category">Manual Estratégico & Tático</div>
+            <h3 class="product-title">Operações Digitais Enxutas</h3>
+            <p class="product-desc">
+              Guia tático de 118 páginas focado em desenho de processos, stack de ferramentas gratuitas e automação de fluxos repetitivos.
+            </p>
+
+            <div class="product-deliverables-title">O que está incluído no acesso:</div>
+            <ul class="product-checklist">
+              <li>
+                <span class="check-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></span>
+                <span>E-book técnico em PDF de alta resolução (118 páginas)</span>
+              </li>
+              <li>
+                <span class="check-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></span>
+                <span>Versão interativa diagramada para leitura em tablet/Kindle</span>
+              </li>
+              <li>
+                <span class="check-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></span>
+                <span>15 diagramas e mapas de processos operacionais editáveis</span>
+              </li>
+              <li>
+                <span class="check-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></span>
+                <span>Checklist de auditoria de gargalos e desperdício de tempo</span>
+              </li>
+              <li>
+                <span class="check-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></span>
+                <span>Planilha de cálculo de capacidade produtiva individual</span>
+              </li>
+            </ul>
+
+            <div class="product-pricing">
+              <div class="price-anchor">de <del>R$ 97</del> por</div>
+              <div class="price-main">
+                <span class="price-currency">R$</span>
+                <span class="price-value">47</span>
+                <span class="price-condition">à vista</span>
+              </div>
+              <div class="price-installment">ou 5x de R$ 10,25 no cartão</div>
+            </div>
+
+            <button class="btn btn-secondary btn-block" data-buy-action data-product-id="manual-operacoes">
+              <span>Adquirir Acesso Imediato</span>
+              <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </button>
+
+            <div class="card-security-badge">
+              <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="#059669">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+              <span>Pagamento criptografado • Garantia de 7 dias</span>
+            </div>
+          </article>
+
+          <!-- CARD 3: Pack de Ferramentas & Scripts -->
+          <article class="product-card" data-category="tools">
+            <div class="product-category">Ferramentas & Automações</div>
+            <h3 class="product-title">Toolkit de Automação & Prompts</h3>
+            <p class="product-desc">
+              Repositório de 120+ prompts operacionais estruturados com variáveis dinâmicas e 12 cenários prontos de automação (Make/Zapier).
+            </p>
+
+            <div class="product-deliverables-title">O que está incluído no acesso:</div>
+            <ul class="product-checklist">
+              <li>
+                <span class="check-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></span>
+                <span>12 blueprints json importáveis diretamente no Make e Zapier</span>
+              </li>
+              <li>
+                <span class="check-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></span>
+                <span>120+ prompts para redação executiva, relatórios e síntese</span>
+              </li>
+              <li>
+                <span class="check-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></span>
+                <span>Planilha de parametrização e avaliação de acurácia de IA</span>
+              </li>
+              <li>
+                <span class="check-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></span>
+                <span>Guia de conexão entre Google Sheets, Notion e E-mails</span>
+              </li>
+              <li>
+                <span class="check-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></span>
+                <span>Acesso a novas adições e melhorias no repositório</span>
+              </li>
+            </ul>
+
+            <div class="product-pricing">
+              <div class="price-anchor">de <del>R$ 147</del> por</div>
+              <div class="price-main">
+                <span class="price-currency">R$</span>
+                <span class="price-value">67</span>
+                <span class="price-condition">à vista</span>
+              </div>
+              <div class="price-installment">ou 8x de R$ 9,51 no cartão</div>
+            </div>
+
+            <button class="btn btn-secondary btn-block" data-buy-action data-product-id="toolkit-automacao">
+              <span>Adquirir Acesso Imediato</span>
+              <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </button>
+
+            <div class="card-security-badge">
+              <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="#059669">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+              <span>Pagamento criptografado • Garantia de 7 dias</span>
+            </div>
+          </article>
+        </div>
+
+        <!-- Banner de Bundle Consolidado -->
+        <div class="bundle-banner">
+          <div>
+            <span class="bundle-tag">Opção Consolidada • Máxima Economia</span>
+            <h3 class="bundle-title">Acervo Integral: Os 3 Produtos Unificados</h3>
+            <p class="bundle-desc">
+              Garanta acesso permanente ao Kernel OS, ao Manual de Operações Digitais e ao Toolkit de Automação em uma única transação, com 62% de desconto sobre o valor avulso.
+            </p>
+          </div>
+
+          <div class="bundle-pricing">
+            <div class="price-anchor">de <del>R$ 441</del> por</div>
+            <div class="price-main" style="justify-content: center;">
+              <span class="price-currency">R$</span>
+              <span class="price-value">167</span>
+              <span class="price-condition">à vista</span>
+            </div>
+            <div class="price-installment" style="color: #94A3B8;">ou 12x de R$ 16,77 no cartão</div>
+            
+            <button class="btn btn-white btn-block" data-buy-action data-product-id="acervo-completo">
+              <span>Garantir Acervo Completo</span>
+              <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         BLOCO DE BLINDAGEM & GARANTIA INCONDICIONAL
+         ========================================================================== -->
+    <section id="garantia" class="section section-alt">
+      <div class="container">
+        <div class="guarantee-box">
+          <div class="guarantee-layout">
+            <div class="guarantee-shield">
+              <!-- Escudo de Proteção SVG -->
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+
+            <div>
+              <div class="guarantee-kicker">Compromisso Legal de Transparência</div>
+              <h2 class="guarantee-title">
+                Garantia Incondicional de 7 Dias: O risco é inteiramente nosso.
+              </h2>
+              <p class="guarantee-text">
+                Em estrito cumprimento ao <strong>Artigo 49 do Código de Defesa do Consumidor (Lei Federal nº 8.078/1990)</strong>, você possui 7 dias corridos após a compra para testar o material na sua rotina. Se por qualquer razão você avaliar que o produto não é exatamente o que esperava, basta enviar um e-mail com o número do seu pedido para <strong>suporte@lkdigital.com</strong>.
+              </p>
+              <p class="guarantee-text" style="margin-top: -12px;">
+                Devolvemos 100% do valor pago em até 24 horas úteis. Sem perguntas incômodas, sem formulários longos, sem burocracia e sem ressentimentos. Nosso foco é manter apenas clientes genuinamente beneficiados.
+              </p>
+
+              <div class="guarantee-pills">
+                <div class="guarantee-pill">
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                  <span>Liberação Instantânea</span>
+                </div>
+
+                <div class="guarantee-pill">
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+                  <span>Ambiente Criptografado 256-bit</span>
+                </div>
+
+                <div class="guarantee-pill">
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" /></svg>
+                  <span>Pagamento Único (Sem Mensalidades)</span>
+                </div>
+
+                <div class="guarantee-pill">
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                  <span>Nota Fiscal Emitida Automaticamente</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         PROVA SOCIAL & DEPOIMENTOS REAIS
+         ========================================================================== -->
+    <section id="depoimentos" class="section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-kicker">Avaliações Verificadas</span>
+          <h2 class="section-title">
+            O que dizem os profissionais que <em>usam no dia a dia.</em>
+          </h2>
+          <p class="section-desc mx-auto">
+            Opiniões sóbrias e técnicas de quem substituiu o improviso por estruturas organizadas.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Depoimento 1 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="stars-row" aria-label="Avaliação 5 de 5 estrelas">
+                <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              </div>
+              <p class="testimonial-quote">
+                "O Kernel OS é o primeiro workspace no Notion que não tenta ser bonito às custas de ser lento ou complexo demais. A divisão do método PARA é cirúrgica e me poupou semanas de montagem. O suporte respondeu minha dúvida sobre banco relacional em menos de duas horas."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">MS</div>
+              <div class="author-info">
+                <span class="author-name">Marcelo Silveira</span>
+                <span class="author-role">Arquiteto de Software & Consultor</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Depoimento 2 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="stars-row" aria-label="Avaliação 5 de 5 estrelas">
+                <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              </div>
+              <p class="testimonial-quote">
+                "O que mais me chamou a atenção foi a sobriedade. Nenhum texto com promessas de faturamento milionário em 30 dias. O Manual de Operações Enxutas é um PDF denso, com diagramas de processos que eu usei de imediato para organizar nossa equipe de 6 pessoas."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">CF</div>
+              <div class="author-info">
+                <span class="author-name">Camila Fontana</span>
+                <span class="author-role">Gerente de Operações em SaaS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Depoimento 3 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="stars-row" aria-label="Avaliação 5 de 5 estrelas">
+                <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              </div>
+              <p class="testimonial-quote">
+                "Os cenários de automação no Make prontos para importar economizaram facilmente 10 horas de configuração. Comprei o pacote do Acervo Completo e o retorno sobre o investimento foi pago no primeiro dia de trabalho."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">RA</div>
+              <div class="author-info">
+                <span class="author-name">Rodrigo Albuquerque</span>
+                <span class="author-role">Fundador & Desenvolvedor de Produtos</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FAQ INTERATIVO (Perguntas Frequentes com Acordeão)
+         ========================================================================== -->
+    <section id="faq" class="section section-alt">
+      <div class="container container-narrow">
+        <div class="section-header text-center">
+          <span class="section-kicker">Transparência Total</span>
+          <h2 class="section-title">
+            Perguntas <em>frequentes e objetivas.</em>
+          </h2>
+          <p class="section-desc mx-auto">
+            Esclareça qualquer dúvida técnica ou de compra antes de tomar sua decisão.
+          </p>
+        </div>
+
+        <div class="faq-container">
+          <!-- Pergunta 1 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Como e quando recebo o acesso ao material?</span>
+              <svg class="faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                O envio é 100% imediato e automatizado. Assim que o pagamento for confirmado pela instituição financeira (em poucos segundos para PIX e cartão de crédito), você receberá um e-mail com as instruções de duplicação, links de download e recibo de compra.
+              </div>
+            </div>
+          </div>
+
+          <!-- Pergunta 2 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Existe alguma taxa de mensalidade ou cobrança recorrente?</span>
+              <svg class="faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Não. Todos os produtos são de pagamento único. Não existem mensalidades, cobranças surpresa ou taxas de renovação. O acesso é permanente e vitalício.
+              </div>
+            </div>
+          </div>
+
+          <!-- Pergunta 3 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Preciso ter conhecimento técnico prévio ou ferramentas pagas?</span>
+              <svg class="faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Não. Nossos templates foram construídos para rodar no plano 100% gratuito do Notion. Os manuais vêm em PDF padrão e os scripts e prompts possuem tutoriais passo a passo em texto e vídeo demonstrando a importação em plataformas sem código (como Make e Zapier).
+              </div>
+            </div>
+          </div>
+
+          <!-- Pergunta 4 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Como funciona exatamente a garantia de reembolso de 7 dias?</span>
+              <svg class="faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Você tem 7 dias corridos após a compra para avaliar o material. Se não for útil para você, basta enviar um e-mail com o assunto "Reembolso" e o número da compra para suporte@lkdigital.com. Seu estorno é processado em até 24 horas úteis sem perguntas.
+              </div>
+            </div>
+          </div>
+
+          <!-- Pergunta 5 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Posso utilizar os templates e materiais com minha equipe de trabalho?</span>
+              <svg class="faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Sim. A licença permite o uso interno ilimitado dentro da sua empresa ou equipe de trabalho. A única restrição é a revenda pública, redistribuição ou compartilhamento comercial não autorizado dos arquivos fontes para terceiros.
+              </div>
+            </div>
+          </div>
+
+          <!-- Pergunta 6 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>E se eu encontrar dificuldades na duplicação ou configuração?</span>
+              <svg class="faq-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Disponibilizamos um canal direto de suporte por e-mail exclusivo para compradores, ativo de segunda a sexta-feira, das 09h às 18h (horário de Brasília). Respondemos em até 24 horas úteis orientando cada passo necessário.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CALL TO ACTION FINAL (Alto Contraste)
+         ========================================================================== -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-box">
+          <span class="cta-kicker">Eficiência Operacional Imediata</span>
+          <h2 class="cta-title">
+            Chega de perder tempo <em>reinventando estruturas</em> do zero.
+          </h2>
+          <p class="cta-desc">
+            Tenha acesso a sistemas testados, documentação profissional e automações limpas prontas para uso hoje mesmo.
+          </p>
+
+          <div class="cta-actions">
+            <a href="#catalogo" class="btn btn-white btn-lg">
+              <span>Acessar o Catálogo de Produtos</span>
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+
+            <a href="#metodo" class="btn btn-ghost-dark btn-lg">
+              <span>Revisar nosso método</span>
+            </a>
+          </div>
+
+          <div class="cta-guarantee-note">
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#34D399">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+            <span>Entrega 100% automatizada e garantia incondicional de 7 dias com devolução total.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER INSTITUCIONAL
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-about">
+          <a href="#" class="brand-link" aria-label="LK Laboratório Digital">
+            <div class="brand-monogram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <path d="M3 14h7v7H3z"></path>
+              </svg>
+            </div>
+            <div class="brand-text">
+              <span class="brand-name">LK</span>
+              <span class="brand-tagline">Laboratório Digital</span>
+            </div>
+          </a>
+
+          <p class="footer-desc">
+            Sistemas operacionais, manuais táticos e ferramentas de automação desenhados com sobriedade e rigor técnico para eliminar o ruído e organizar sua execução digital.
+          </p>
+
+          <div class="footer-status-pill">
+            <span class="status-dot"></span>
+            <span>Servidores e Checkout 100% Operacionais</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Navegação</div>
+          <ul class="footer-links">
+            <li><a href="#metodo" class="footer-link">Sobre & Método</a></li>
+            <li><a href="#catalogo" class="footer-link">Catálogo de Produtos</a></li>
+            <li><a href="#garantia" class="footer-link">Blindagem & CDC Art. 49</a></li>
+            <li><a href="#depoimentos" class="footer-link">Avaliações de Clientes</a></li>
+            <li><a href="#faq" class="footer-link">Perguntas Frequentes</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Atendimento & Suporte</div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-label">E-mail de Suporte Técnico</span>
+            <span class="footer-contact-val">suporte@lkdigital.com</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-label">Contato Institucional</span>
+            <span class="footer-contact-val">contato@lkdigital.com</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-label">Horário de Atendimento</span>
+            <span class="footer-contact-val">Segunda a Sexta, das 09h às 18h (Brasília)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          <p>© 2026 LK Tecnologia e Soluções Digitais Ltda. Todos os direitos reservados.</p>
+          <p class="footer-legal-notice">
+            CNPJ: 48.291.842/0001-90 • Sede Operacional: Av. Paulista, 1.106 - Bela Vista, São Paulo - SP.
+            Este portal não possui vínculo societário com o Notion Labs, Inc. nem com a Make/Zapier.
+          </p>
+        </div>
+
+        <div style="display: flex; gap: 16px;">
+          <a href="#" id="openTermsTrigger" class="footer-link">Termos de Uso</a>
+          <span style="color: #CBD5E1;">•</span>
+          <a href="#" id="openPrivacyTrigger" class="footer-link">Privacidade (LGPD)</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODAL DE PRÉ-CHECKOUT INTERATIVO
+       ========================================================================== -->
+  <div id="checkoutModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalProductTitle">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-header-text">
+          <span class="modal-kicker">Ambiente Seguro</span>
+          <h3 class="modal-title">Confirmação de Acesso</h3>
+        </div>
+        <button class="modal-close-btn modal-close-trigger" aria-label="Fechar Modal">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="checkout-summary-box">
+          <div id="modalProductCategory" class="checkout-product-cat">SISTEMA DIGITAL SELECIONADO</div>
+          <h4 id="modalProductTitle" class="checkout-product-name">Nome do Produto</h4>
+          
+          <div class="checkout-price-row">
+            <div>
+              <span id="modalPriceOriginal" style="font-size: 0.8125rem; color: #64748B;">De R$ 197 por</span>
+              <div id="modalInstallments" style="font-size: 0.75rem; color: #059669; font-weight: 600;">ou 12x no cartão</div>
+            </div>
+            <div id="modalPriceCurrent" class="checkout-price-val">R$ 97</div>
+          </div>
+        </div>
+
+        <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: #111827; letter-spacing: 0.05em; margin-bottom: 12px;">
+          Entregáveis imediatos confirmados:
+        </div>
+        <ul id="modalBenefitsList" class="checkout-benefits-list">
+          <!-- Injetado via JavaScript -->
+        </ul>
+
+        <div class="payment-gateways-info">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#059669">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+          </svg>
+          <span>Intermediado via gateway oficial com certificação PCI-DSS e PIX instantâneo</span>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button id="modalCheckoutBtn" class="btn btn-primary btn-block btn-lg">
+          <span>Ir para Pagamento Seguro</span>
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </button>
+        <div style="text-align: center; font-size: 0.71875rem; color: #64748B; margin-top: 10px;">
+          Garantia incondicional de devolução total em até 7 dias da compra.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL DE POLÍTICAS LEGAIS (TERMOS E PRIVACIDADE)
+       ========================================================================== -->
+  <div id="policyModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="policyModalTitle">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-header-text">
+          <span class="modal-kicker">Avisos Regulamentares</span>
+          <h3 id="policyModalTitle" class="modal-title">Termos Legais</h3>
+        </div>
+        <button class="modal-close-btn modal-close-trigger" aria-label="Fechar Modal">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <div id="policyModalBody" class="modal-body">
+        <!-- Injetado dinamicamente -->
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary btn-block modal-close-trigger">
+          <span>Fechar Documento</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
